@@ -1,0 +1,36 @@
+.box {
+  border: 2px solid black;
+  border-radius: 8px; // Rounded corners
+  padding: 16px; // Padding inside the box
+  background-color: #e0e0e0; // Slightly darker grey color for the background
+  position: relative; // To ensure absolute positioning of the divider works correctly
+}
+
+.divider {
+  border-left: 3px solid rgba(0, 0, 0, 0.2); // Slightly thicker, subtle divider
+  height: 70%; // Adjusted height to leave space from the top and bottom
+  position: absolute; // Positioned absolutely within the container
+  top: 15%; // Added to leave space from the top
+  left: 50%; // Positioned in the center of the box
+  transform: translateX(-50%);
+}
+
+.formControl {
+  position: relative;
+}
+
+.select-label {
+  &.Mui-focused,
+  &.MuiFormLabel-filled {
+    transform: translate(0, -1.5em) scale(0.75);
+    background: #e0e0e0;
+    padding: 0 4px;
+  }
+}
+
+.select {
+  .MuiSelect-select {
+    padding-left: 0;
+    border: none;
+  }
+}
